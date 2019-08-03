@@ -4,6 +4,7 @@
   padding: 20px;
   font-family: "Montserrat", sans-serif;
 }
+
 /*header*/
 .header {
   display: flex;
@@ -23,6 +24,7 @@
   font-weight: 100;
   font-size: 50px;
   color: #3ba08c;
+  padding: 20px;
 }
 
 .btn {
@@ -32,32 +34,65 @@
   background: #63cbb6;
   color: white;
   font-size: 20px;
+  cursor: pointer;
 }
 
+/*main*/
 .h2 {
   margin: 5px;
+  width: 100%;
 }
 
 .balls {
+  display: flex;
+  flex-flow: row wrap;
   background: white;
   border: solid #3ba08c 7px;
   border-radius: 5px;
   padding: 5px 20px;
   margin-bottom: 30px;
 }
-.ball {
+.number {
   display: flex;
   justify-content: center;
-  width: 15px;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   border: solid #63cbb6 5px;
   border-radius: 50%;
   text-align: center;
-  padding: 10px;
   margin: 15px;
 }
 
 .matched {
-  border: solid #3ba08c;
+  border: solid #3ba08c 5px;
   background: #63cbb6;
   color: white;
+  transition: ease 1s;
 }
+.hidden {
+  display: none;
+}
+.showup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: 13%;
+  width: 70%;
+  height: 30vh;
+  top: px;
+  background: rgba(59, 160, 140, 0.9);
+  border-radius: 25px;
+}
+
+.modalh3 {
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+  font-size: 50px;
+  color: rgb(233, 232, 232);
+  padding: 20px;
+  text-align: center;
+}
+
+/*animations*/
