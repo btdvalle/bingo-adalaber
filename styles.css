@@ -1,0 +1,63 @@
+.body {
+  background: #b6e7dd;
+  margin: 0;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+/*header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-div {
+  display: inline-block;
+  width: 150px;
+}
+.img {
+  width: 100%;
+}
+.title {
+  display: inline-block;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+  font-size: 50px;
+  color: #3ba08c;
+}
+
+.btn {
+  padding: 5px 15px 5px 15px;
+  border: solid #3ba08c 3px;
+  border-radius: 5px;
+  background: #63cbb6;
+  color: white;
+  font-size: 20px;
+}
+
+.h2 {
+  margin: 5px;
+}
+
+.balls {
+  background: white;
+  border: solid #3ba08c 7px;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-bottom: 30px;
+}
+.ball {
+  display: flex;
+  justify-content: center;
+  width: 15px;
+  border: solid #63cbb6 5px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  margin: 15px;
+}
+
+.matched {
+  border: solid #3ba08c;
+  background: #63cbb6;
+  color: white;
+}
