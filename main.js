@@ -76,17 +76,18 @@ const isBingo = function() {
   }
 };
 
-getCardNumbers();
-getAleatory(newNumbers, 100);
 const bingo = function() {
   getNewNumber();
   findMatched();
   isBingo();
 };
-
 // btn.addEventListener("click", bingo);
+
 let stop;
 const play = function() {
   stop = setInterval(bingo, 1000);
 };
+
+getCardNumbers();
+getAleatory(newNumbers, 100);
 btn.addEventListener("click", play);
