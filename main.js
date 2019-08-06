@@ -1,9 +1,10 @@
 "use strict";
-const cardNumbers = [];
 const card = document.querySelector(".js-card");
 const btn = document.querySelector(".js-btn");
 const newContainer = document.querySelector(".js-newball");
 const modal = document.querySelector(".js-modal");
+const cardNumbers = [];
+const newNumbers = [];
 
 const getAleatory = function(arr, long) {
   arr[0] = Math.round(Math.random() * 99 + 1);
@@ -34,9 +35,7 @@ const getCardNumbers = function() {
   }
 };
 
-const newNumbers = [];
 let newNumber;
-getAleatory(newNumbers, 100);
 let i = 0;
 const getNewNumber = function() {
   if (i < 100) {
@@ -64,19 +63,30 @@ const isBingo = function() {
   for (let idx = 0; idx < cardNumbers.length; idx++) {
     if (newNumbers.slice(0, i).indexOf(cardNumbers[idx]) === -1) {
       allMatches = false;
+      const play = function() {
+        setInterval(bingo, 1000);
+      };
+      btn.addEventListener("click", play);
     }
   }
   if (allMatches === true) {
     btn.classList.add("hidden");
     showUpModal();
+    clearInterval(stop);
   }
 };
 
+getCardNumbers();
+getAleatory(newNumbers, 100);
 const bingo = function() {
   getNewNumber();
   findMatched();
   isBingo();
 };
 
-getCardNumbers();
-btn.addEventListener("click", bingo);
+// btn.addEventListener("click", bingo);
+let stop;
+const play = function() {
+  stop = setInterval(bingo, 1000);
+};
+btn.addEventListener("click", play);
