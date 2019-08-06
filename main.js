@@ -28,7 +28,7 @@ const getAleatory = function(arr, long) {
 // };
 
 const getCardNumbers = function() {
-  getAleatory(cardNumbers, 3);
+  getAleatory(cardNumbers, 20);
   for (let i = 0; i < cardNumbers.length; i++) {
     card.innerHTML += `<div class="number number${i}">  ${cardNumbers[i]}</div>`;
   }
